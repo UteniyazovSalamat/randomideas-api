@@ -1,0 +1,14 @@
+{
+    "name": "randomideas-api",
+    "version": "1.0.0",
+    "description": "Practice project for learning backend and frontend development",
+    "main": "server.js",
+    "scripts": {
+        "start": "node server.js"
+    },
+    "author": "Salamat Uteniyazov",
+    "license": "MIT",
+    "dependencies": {
+        "express": "^5.1.0"
+    }
+}
