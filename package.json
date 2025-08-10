@@ -4,11 +4,15 @@
     "description": "Practice project for learning backend and frontend development",
     "main": "server.js",
     "scripts": {
-        "start": "node server.js"
+        "start": "node server.js",
+        "dev": "nodemon server.js"
     },
     "author": "Salamat Uteniyazov",
     "license": "MIT",
     "dependencies": {
         "express": "^5.1.0"
+    },
+    "devDependencies": {
+        "nodemon": "^3.1.10"
     }
 }
