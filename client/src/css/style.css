@@ -36,7 +36,7 @@ header {
     height: 100%;
     width: 100%;
     overflow: auto;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.7);
 }
 
 .modal-box {
@@ -72,6 +72,7 @@ form textarea {
 
 form textarea {
     height: 100px;
+    resize: vertical;
 }
 
 form label {
