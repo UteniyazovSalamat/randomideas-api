@@ -23,6 +23,7 @@
         "webpack-dev-server": "^5.2.2"
     },
     "dependencies": {
-        "@fortawesome/fontawesome-free": "^7.0.0"
+        "@fortawesome/fontawesome-free": "^7.0.0",
+        "axios": "^1.11.0"
     }
 }
