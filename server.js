@@ -25,7 +25,7 @@ app.use(
 );
 
 app.get('/', (req, res) => {
-    res.json({ message: 'Welcome to the FandomIdeas API' });
+    res.json({ message: 'Welcome to the RandomIdeas API' });
 });
 
 const ideasRouter = require('./routes/ideas');
