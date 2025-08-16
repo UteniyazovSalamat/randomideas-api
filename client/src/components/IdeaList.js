@@ -15,6 +15,22 @@ class IdeaList {
         this._validTags.add('inventions');
     }
 
+    formatDate(isoString) {
+        const date = new Date(isoString);
+
+        const year = date.getFullYear();
+        const month = String(date.getMonth() + 1).padStart(2, '0');
+        const day = String(date.getDate()).padStart(2, '0');
+
+        let hours = date.getHours();
+        const minutes = String(date.getMinutes()).padStart(2, '0');
+        const ampm = hours >= 12 ? 'PM' : 'AM';
+        hours = hours % 12;
+        hours = hours ? hours : 12;
+
+        return `${year}-${month}-${day} ${hours}:${minutes}${ampm.toLowerCase()}`;
+    }
+
     addEventListeners() {
         this._ideaListEl.addEventListener('click', (e) => {
             if (e.target.classList.contains('fa-times')) {
@@ -71,6 +87,8 @@ class IdeaList {
                     idea.username === localStorage.getItem('username')
                         ? `<button class="delete"><i class="fas fa-times"></i></button>`
                         : '';
+                const formattedDate = this.formatDate(idea.date);
+
                 return `
                     <div class="card" data-id="${idea._id}">
                         ${deleteBtn}
@@ -79,7 +97,7 @@ class IdeaList {
                         </h3>
                         <p class="tag ${tagClass}">${idea.tag.toUpperCase()}</p>
                         <p>
-                            Posted on <span class="date">${idea.date}</span> by
+                            Posted on <span class="date">${formattedDate}</span> by
                             <span class="author">${idea.username}</span>
                         </p>
                     </div>
