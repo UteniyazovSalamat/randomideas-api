@@ -10,28 +10,44 @@ The app includes a **Node.js/Express REST API** with **MongoDB** as the database
 -   Add and delete ideas .
 -   Modal pop-ups for adding new ideas.
 
-## Install & Run
+## Usage
+
+### Install Dependencies
+
+Install dependencies on the front-end and back-end
 
 ```bash
-# Install back-end dependencies
 npm install
-
-# Install front-end dependencies
 cd client
 npm install
-cd ..
+```
 
-# Run back-end server normally
+### Back-end/Express Server
+
+```bash
 npm start
+```
 
-# Or run back-end with Nodemon (for development)
-npm run dev
+or
 
-# Run front-end Webpack dev server
+```bash
+npm run dev (Nodemon)
+```
+
+Visit `http://localhost:5001`
+
+### Front-end/Webpack Dev Server
+
+```bash
 cd client
 npm run dev
+```
 
-# Build front-end production files
+Visit `http://localhost:3000`
+
+To build front-end production files
+
+```bash
+cd client
 npm run build
-cd ..
 ```
